@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.haojie.act"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="20"
+        android:targetSdkVersion="20" />
+    
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/> 
+	<uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+	 <uses-permission android:name="android.permission.CALL_PHONE"/>
+	 <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> 
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/logos"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.NoTitleBar">  
+        >
+        <activity android:name="MainAct"
+            	  android:launchMode="singleTask" 
+            	  android:screenOrientation="landscape">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        //报警界面
+        <activity android:name="AlarmAct" 
+            	  android:launchMode="singleTask" 
+            	  android:screenOrientation="landscape"/>
+        //查询界面
+        <activity android:name="SearchAct"
+            	  android:launchMode="singleTask" 
+            	  android:screenOrientation="landscape"/>
+        //报警记录
+         <activity android:name="com.haojie.act.AlarmHestoryAct"/>
+
+         //设置电话和IP
+         <activity android:name="com.haojie.act.SetServerAct"/>
+        <service android:name="com.tcpip.model.TCPService"/>
+        <receiver android:name="recever.BootBroadcastReceiver">
+  			<intent-filter>
+    			<action android:name="android.intent.action.BOOT_COMPLETED" />
+   			</intent-filter>
+  		</receiver>
+  		
+        //设置电话和IP
+        <receiver
+   			android:name="recever.NetWorkStatusReceiver"
+   			android:enabled="true"
+   			android:exported="true">
+   			<intent-filter>
+     			<action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+   			</intent-filter>
+ 		</receiver>
+    </application>
+
+</manifest>

@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:id="@+id/rainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="155dp"
+        android:background="#CCFF66" >
+
+        <TextView
+            android:id="@+id/tvrain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@android:color/black"
+            android:text="当日雨量:" />
+
+        <TextView
+            android:id="@+id/tv_rain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/tvrain"
+            android:textColor="@android:color/black"
+            android:text=" 000 " />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textColor="@android:color/black"
+            android:layout_toRightOf="@id/tv_rain"
+            android:text="毫米" />
+
+        <RelativeLayout
+            android:id="@+id/waterLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_below="@id/tvrain" >
+
+            <TextView
+                android:id="@+id/tvWater"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textColor="@android:color/black"
+                android:text="当日水位:" />
+
+            <TextView
+                android:id="@+id/water"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@id/tvWater"
+                android:textColor="@android:color/black"
+                android:text=" 000 " />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@id/water"
+                android:textColor="@android:color/black"
+                android:text="厘米" />
+        </RelativeLayout>
+        
+         <RelativeLayout
+            android:id="@+id/monthRainLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_below="@id/waterLayout" >
+
+            <TextView
+                android:id="@+id/tvMonthain"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textColor="@android:color/black"
+                android:text="本月降水:" />
+
+            <TextView
+                android:id="@+id/monthRain"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@id/tvMonthain"
+                android:textColor="@android:color/black"
+                android:text=" 000 " />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@id/monthRain"
+                android:textColor="@android:color/black"
+                android:text="毫米" />
+        </RelativeLayout>
+        
+
+        
+        <RelativeLayout
+            android:id="@+id/alarmRainLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/monthRainLayout"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+             >
+
+            <TextView
+                android:id="@+id/tvRainAlarm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:text="雨量报警：" />
+
+            <TextView
+                android:id="@+id/alarmRain"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/tvRainAlarm"
+                android:textColor="@android:color/black"
+                android:text="一级报警" />
+
+        </RelativeLayout>
+        
+         <RelativeLayout
+            android:id="@+id/alarmWaterLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/alarmRainLayout"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+             >
+
+            <TextView
+                android:id="@+id/tvWaterAlarm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:text="水位报警：" />
+
+            <TextView
+                android:id="@+id/alarmWater"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/tvWaterAlarm"
+                android:textColor="@android:color/black"
+                android:text="一级报警" />
+
+        </RelativeLayout>
+        
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+             >
+
+            <TextView
+                android:id="@+id/year"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:text="2017" />
+
+            <TextView
+                android:id="@+id/month"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/year"
+                android:textColor="@android:color/black"
+                android:text="3" />
+
+            <TextView
+                android:id="@+id/day"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:layout_toRightOf="@+id/month"
+                android:text="30" />
+
+            <TextView
+                android:id="@+id/hour"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/day"
+                android:textColor="@android:color/black"
+                android:text="17" />
+
+            <TextView
+                android:id="@+id/second"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/hour"
+                android:textColor="@android:color/black"
+                android:text="56" />
+
+            <TextView
+                android:id="@+id/min"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/second"
+                android:textColor="@android:color/black"
+                android:text="30" />
+        </RelativeLayout>
+        
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_alignParentBottom="true"
+            android:background="@android:color/holo_blue_bright" />
+    </RelativeLayout>
+
+</LinearLayout>

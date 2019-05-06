@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/holo_green_light">
+
+    <RelativeLayout
+        android:id="@+id/topTitle"
+        android:layout_width="match_parent"
+        android:layout_height="47dp"
+        android:background="@android:color/holo_blue_bright">
+
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="15dp"
+        android:src="@mipmap/back"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="雨量水位数据"
+        android:textSize="23dp"
+        android:textColor="#fffffb"
+        android:layout_centerInParent="true"/>
+
+  </RelativeLayout>
+
+         <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="40dp"
+                android:layout_marginLeft="10dp"
+                >
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                >
+
+                <TextView
+                    android:id="@+id/todayrain"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:text="今日雨量:"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/activity_search_text_size"/>
+
+                <TextView
+                    android:id="@+id/today_rain"
+                    android:layout_width="@dimen/activity_search_num_size"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/todayrain"
+                    android:background="@android:color/white"
+                   android:layout_centerVertical="true"
+                    android:gravity="center"
+                    android:textColor="@color/colorAccent"
+                    android:text="000.0"
+                    android:textSize="@dimen/activity_search_text_size"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/today_rain"
+                    android:layout_centerVertical="true"
+                    android:text="  毫米"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/activity_search_text_size"/>
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+
+                    >
+
+                    <TextView
+                        android:id="@+id/todaywater"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="当前水位:"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/activity_search_text_size"/>
+
+                    <TextView
+                        android:id="@+id/today_water"
+                        android:layout_width="@dimen/activity_search_num_size"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/todaywater"
+                        android:background="@android:color/white"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/colorAccent"
+                        android:gravity="center"
+                        android:text="0000"
+                        android:textSize="@dimen/activity_search_text_size"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/today_water"
+                        android:layout_centerVertical="true"
+                        android:text="  厘米"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/activity_search_text_size"/>
+                </RelativeLayout>
+		</LinearLayout>
+		
+         
+         <LinearLayout
+             android:layout_marginLeft="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp"
+                >
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    >
+
+                    <TextView
+                        android:id="@+id/mouthrain"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="本月降雨:"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/activity_search_text_size"/>
+
+                    <TextView
+                        android:id="@+id/mouth_rain"
+                        android:layout_width="@dimen/activity_search_num_size"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/mouthrain"
+                        android:background="@android:color/white"
+                        android:layout_centerVertical="true"
+                        android:gravity="center"
+                        android:textColor="@color/colorAccent"
+                        android:text="0000"
+                        android:textSize="@dimen/activity_search_text_size"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/mouth_rain"
+                        android:layout_centerVertical="true"
+                        android:text="  毫米"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/activity_search_text_size"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    >
+                    <TextView
+                        android:id="@+id/tv_today"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="场次降雨:"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/activity_search_text_size"/>
+
+                    <TextView
+                        android:id="@+id/rain_num"
+                        android:layout_width="@dimen/activity_search_num_size"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/tv_today"
+                        android:background="@android:color/white"
+                        android:layout_centerVertical="true"
+                        android:text="000.0"
+                        android:textColor="@color/colorAccent"
+                        android:gravity="center"
+                        android:textSize="@dimen/activity_search_text_size"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/rain_num"
+                        android:layout_centerVertical="true"
+                        android:text="  毫米"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/activity_search_text_size"/>
+            </RelativeLayout>
+      </LinearLayout>    
+      
+         
+             <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="10dp"
+                    >
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    >
+
+                    <TextView
+                        android:id="@+id/alarmWaterTitel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="水位报警:"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/activity_search_text_size"/>
+
+                    <TextView
+                        android:id="@+id/alarmWater"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/alarmWaterTitel"
+                        android:layout_centerVertical="true"
+                        android:gravity="center"
+                        android:textColor="@color/colorAccent"
+                        android:text="暂无报警"
+                        android:textSize="@dimen/activity_search_text_size"/>
+
+                   
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    >
+                    <TextView
+                        android:id="@+id/alarmRainTitel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="110dp"
+                        android:text="雨量报警:"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/activity_search_text_size"/>
+
+                    <TextView
+                        android:id="@+id/alarmRain"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/alarmRainTitel"
+                        android:layout_centerVertical="true"
+                        android:text="暂无报警"
+                        android:textColor="@color/colorAccent"
+                        android:gravity="center"
+                        android:textSize="@dimen/activity_search_text_size"/>
+           		 </RelativeLayout>
+           </LinearLayout>
+</LinearLayout>

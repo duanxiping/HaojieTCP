@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="spingarr">
+        <item>1月份降雨</item>
+        <item>2月份降雨</item>
+        <item>3月份降雨</item>
+        <item>4月份降雨</item>
+        <item>5月份降雨</item>
+        <item>6月份降雨</item>
+        <item>7月份降雨</item>
+        <item>8月份降雨</item>
+        <item>9月份降雨</item>
+        <item>10月份降雨</item>
+        <item>11月份降雨</item>
+        <item>12月份降雨</item>
+
+    </string-array>
+</resources>

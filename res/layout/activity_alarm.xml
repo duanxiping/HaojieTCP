@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#daebf7">
+
+    <RelativeLayout
+        android:id="@+id/topTitle"
+        android:layout_width="match_parent"
+        android:layout_height="47dp"
+        android:background="@android:color/holo_blue_bright">
+
+    <TextView
+         android:id="@+id/tv_net"
+         android:layout_width="wrap_content"
+         android:layout_height="40dp"
+         android:layout_centerVertical="true"
+         android:layout_marginLeft="10dp"
+         android:textSize="23dp"
+         android:visibility="gone"
+        android:textColor="#fffffb"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="报  警"
+        android:textSize="@dimen/activity_search_text_size"
+        android:textColor="#fffffb"
+        android:layout_centerInParent="true"
+        />
+    
+     <TextView
+        android:id="@+id/trigger_record"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="触发记录"
+        android:textSize="22dp"
+        android:textColor="#fffffb"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/alarmlayout"
+        android:layout_below="@id/topTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="110dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center_horizontal"
+            >
+
+            <ImageView
+                android:id="@+id/alarm_one"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/alarem_no"/>
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/baojing"
+                android:layout_marginTop="15dp"
+                android:text="一级报警"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:textSize="23dp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            >
+
+            <ImageView
+                android:id="@+id/alarm_two"
+                android:layout_width="wrap_content"
+                android:layout_height="150dp"
+                android:background="@drawable/alarem_no"/>
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/search"
+                android:layout_marginTop="15dp"
+                android:text="二级报警"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:textSize="23dp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            >
+
+            <ImageView
+                android:id="@+id/alarm_three"
+                android:layout_width="wrap_content"
+                android:layout_height="150dp"
+                android:background="@drawable/alarem_no"/>
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/music"
+                android:layout_marginTop="15dp"
+                android:text="三级报警"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:textSize="23dp"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/clearlayout"
+        android:layout_width="150dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/alarmlayout"
+        >
+
+        <ImageView
+            android:id="@+id/alarm_clear"
+            android:layout_width="150dp"
+            android:layout_height="120dp"
+            android:background="@drawable/alarm_button_clear"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="清除报警"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:textSize="23dp"/>
+    </RelativeLayout>
+
+
+</RelativeLayout>
